@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee.css">
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUAwPmey1HhyRNBZfpgsTtmdZJmKeTjAs&callback=initMap" async defer></script>
     <title>Assignment 2</title>
 
@@ -34,21 +35,56 @@
 
 <body>
     <header>
-        <h1>Assignment 2</h1>
+        <nav class="navbar navbar-expand-lg bg-custom-color">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Assignment 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Weather information</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Air quality information</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pictures</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+       
     </header>
-
     <main>
-        <div class="container">
-            <form onsubmit="findCityWeather(event)">
-                <div class="mb-3" style="width: 50%">
-                    <label class="form-label" for="cityInput">Enter city name</label>
-                    <input type="text" class="form-control" id="cityInput" required />
-                </div>
-                <button class="btn btn-primary" type="submit">Search</button>
-            </form>
+        <div class="background-container">
 
+            <div class="container text-center custom-container">
+                
+                <form onsubmit="findCityWeather(event)">
+                    <div class="mb-7 " style="width: 100%" >
+                        <label class="form-label" for="cityInput">Enter the city name</label>
+                        <input type="text" class="form-control" id="cityInput" required />
+                    </div>
+                    <button class="btn btn-primary" id="search" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="container">
+          
+            <h2 class="mb-4">Weather Information</h2>
             <div class="container mt-4" id="weatherCard">
-                <h2 class="mb-4">Weather Information</h2>
+               
 
                 <div class="card">
                     <div class="card-body">
@@ -59,17 +95,13 @@
                             Country Code: <span id="country_code"></span>
                         </p>
                         <p class="card-text">
+                            Weather: <span id="weatherDescription"></span>
+                        </p>
+                        <p class="card-text">
                             Coordinates: <span id="coordinates"></span>
                         </p>
                         <p class="card-text">
                             Temperature: <span id="temperature"></span> °F
-                        </p>
-                        <p class="card-text">
-                            Weather: <span id="weatherDescription"></span>
-                        </p>
-                        <p class="card-text">Humidity: <span id="humidity"></span>%</p>
-                        <p class="card-text">
-                            Wind Speed: <span id="windSpeed"></span> m/s
                         </p>
                         <p class="card-text">
                             Max temperature: <span id="max_temperature"></span>°F
@@ -80,17 +112,24 @@
                         <p class="card-text">
                             Feels like temperature: <span id="feels_like_temperature"></span>°F
                         </p>
+                    
+                        <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                        <p class="card-text">
+                            Wind Speed: <span id="windSpeed"></span> m/s
+                        </p>
+                        
                     </div>
                 </div>
-            </div>
+                
+            </div> 
         </div>
         <div id="airQuality">
             <h2>Air Quality Information</h2>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">
+                    <p class="card-title">
                         CO: <span id="co"></span>
-                    </h5>
+                    </p>
                     <p class="card-text">
                         NO2: <span id="no2"></span>
                     </p>
@@ -100,16 +139,18 @@
                 </div>
             </div>
         </div>
-
+        <div class="container">
         <div id="map"></div>
-
+        </div>
        
 
 
         <div id="image-create"></div>
 
 
+        <section class="py-0 circle-blend circle-blend-right circle-warning" id="service">
 
+      </section>
       
     </main>
 

@@ -113,7 +113,7 @@ const displayAirQuality = (data) => {
     const aqiBox = document.getElementById('airQuality');
     let aqiLevel = 'good';
 
-    // Determine AQI level based on overall AQI value
+    
     if (data.overall_aqi <= 50) {
         aqiLevel = 'good';
     } else if (data.overall_aqi <= 100) {
@@ -126,12 +126,12 @@ const displayAirQuality = (data) => {
         aqiLevel = 'hazardous';
     }
 
-    // Add appropriate CSS class to the box
+    
     aqiBox.classList.add(`aqi-${aqiLevel}`);
 
-    // Update pollutant information as before
+   
     document.getElementById('co').textContent = data.CO ? `concentration- ${data.CO.concentration}, AQI- ${data.CO.aqi}` : 'N/A';
     document.getElementById('no2').textContent = data.NO2 ? `concentration- ${data.NO2.concentration}, AQI- ${data.NO2.aqi}` : 'N/A';
     document.getElementById('o3').textContent = data.O3 ? `concentration- ${data.O3.concentration}, AQI- ${data.O3.aqi}` : 'N/A';
-    // Add more lines to display other pollutants if needed
+    
 }

@@ -1,7 +1,8 @@
+
 #image-create {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px; /* Adjust the gap between images */
+    gap: 20px; 
 }
 
 #image-create img {
@@ -14,4 +15,26 @@
 
 #image-create img:hover {
     transform: scale(1.1); 
+}
+
+.background-container {
+    background-image: url('ff.jpg') !important;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    color: #DCE0D8ff;
+    border-radius: 50px;
+    margin: 20px;
+    padding-top: 50px; 
+}
+#airQuality{
+    margin-left: 130px  ;
+}
+
+footer{
+    background-color: darkslategrey;
 }

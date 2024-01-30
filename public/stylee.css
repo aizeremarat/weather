@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat:wght@300;500&family=Philosopher&display=swap');
+body{
+--alabaster: #DCE0D8ff;
+--eerie-black: #1F2424ff;
+--gunmetal: #2E3F42ff;
+--ash-gray: #C2D0C8ff;
+--battleship-gray: #9D9D93ff;
+   color: #ffffff;
+}
+
+*{
+    color: inherit;
+    font-family: 'DM Sans', sans-serif;
+}
+header {
+    background-color: #2E3F42ff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    padding: 5 px 0;
+    color: #ffffff;
+}
+
+
+.bg-custom-color {
+    background-color:#2E3F42ff/* Change to your desired color */
+}
+
+.navbar-nav .nav-item a{
+    margin-left: 20px;
+    color: #DCE0D8ff;
+}
+
+
+.background-container {
+    background-image: url('ff.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    color: #DCE0D8ff;
+    border-radius: 50px;
+    margin: 20px;
+    padding-top: 50px; 
+}
+
+
+main {
+    background-color: #2E3F42ff;
+    padding: 5px;
+}
+
+.custom-container {
+    max-width: 80%;
+    text-align: center; 
+    font-size: 24px;
+    padding: 10px;
+   color: #2E3F42ff;
+    justify-content: center; 
+}
+
+.custom-container p {
+    margin-bottom: 50px;
+    font-size: 48px;
+}
+.form-label {
+   width: 50%;
+}
+.btn-primary{
+    margin: 10px;
+    color:cadetblue;
+    background-color:cadetblue ;
+}
+#search{
+    background-color:cadetblue;
+}
+.custom-btn {
+    font-size: 30px !important;
+    line-height: 1.5;
+    background-color: #F8C1C0 !important;
+    border-color: #F8C1C0;
+    color: #ffffff !important;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* CSS for Weather Information Cards */
+h2{
+    display: flexbox;
+    align-items: center;
+}
+#weatherCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Animation for Weather Information Cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    #weatherCard .card {
+        width: calc(100% - 20px);
+    }
+}
+.container-heading {
+    text-align: center;
+    color: #DCE0D8ff;
+}
