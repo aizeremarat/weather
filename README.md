@@ -3,6 +3,8 @@ I used list of APIs:
 1. Google Maps API
 2. Unsplash API
 3. AQI API
+
+   
 **1. Clone the application**
 
 ```bash
